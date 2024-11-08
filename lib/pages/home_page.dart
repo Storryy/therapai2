@@ -1,10 +1,13 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:therapai2/pages/chat_list_page.dart';
 
+import '../services/chat_history.dart';
 import 'chat_page.dart';
 
 class HomePage extends StatelessWidget {
-  HomePage({super.key});
+  final String userId;
+  HomePage({super.key, required this.userId});
 
   final user = FirebaseAuth.instance.currentUser!;
 
@@ -65,7 +68,7 @@ class HomePage extends StatelessWidget {
             // Start Chat Button
             ElevatedButton(
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const chatPage()));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => ChatListPage(userId: userId, chatId: '',)));
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xFF00796B), // Button color (Dark green)

@@ -1,10 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:therapai2/components/my_button.dart';
-import 'package:therapai2/components/my_textfield.dart';
-import 'package:therapai2/services/auth_service.dart';
-
+import '../components/my_button.dart';
+import '../components/my_textfield.dart';
 import '../components/square_tile.dart';
+import '../services/auth_service.dart';
 
 class RegisterPage extends StatefulWidget {
   final Function()? onTap;
@@ -39,7 +38,7 @@ class _LoginPageState extends State<RegisterPage> {
         );
       }
       else {
-        // Show error that passwords don't match 
+        // Show error that passwords don't match
         showErrorMessage("Passwords don't match");
         Navigator.pop(context);
       }

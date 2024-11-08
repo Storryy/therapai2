@@ -29,7 +29,7 @@ class SendQuery {
         botText = _chatHistory.messages[i + 1]['text'];
       }
     }
-    final url = Uri.parse('https://7a2f-2401-4900-8814-a5fb-691a-c7e2-9858-8a15.ngrok-free.app/api/chat');
+    final url = Uri.parse('https://22c2-2401-4900-8815-40ac-8cd7-9c2a-2e85-3cf3.ngrok-free.app/api/chat');
 
     // Define the JSON body
     final body = jsonEncode({
